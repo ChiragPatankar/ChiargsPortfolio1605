@@ -1,0 +1,673 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+body{
+    background: #080808;
+    color:black;
+}
+#header{
+    width:100%;
+    height:100vh;
+    background-image:url(images/bg.jpg);
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    
+
+}
+.container{
+    padding: 10px 10%;
+    
+}
+nav {
+    position: fixed; /* Keep the navigation bar fixed */
+    top: 0; /* Align the navigation bar to the top of the viewport */
+    left: 0; /* Align the navigation bar to the left of the viewport */
+    width: 100%; /* Set the width to cover the entire viewport */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    backdrop-filter: blur(2px); /* Adjust the blur intensity as needed */
+    -webkit-backdrop-filter: blur(2px); /* Safari */
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the background color and opacity */
+    z-index: 1000; /* Ensure the navigation bar is on top of other content */
+    /* Other styles for your nav bar */
+}
+
+.logo{
+    width:80px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px; 
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    
+    
+}
+nav ul li a i {
+    margin-right: 5px; /* Adjust as needed to create space between icon and text */
+}
+
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:#ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+    
+}
+
+#header {
+    background-color: #333; /* Set your desired background color */
+    color: white; /* Set your desired text color */
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Adjust spacing between menu items */
+}
+
+#header-text {
+    margin-top: 20vh; /* Adjust as needed */
+    margin-left: 20%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 60vh; /* Adjust as needed */
+    width: 80%; /* Adjust as needed */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 10ch }
+}
+
+#header-text h1 {
+    font-size: 60px;
+    color: white;
+    margin-right: 0;
+    overflow: hidden;
+    border-right: .15em solid white; /* This will create the blinking cursor effect */
+    white-space: nowrap; /* This prevents the text from wrapping */
+    animation: typing 3s steps(30, end), blink-caret .5s step-end infinite; /* Adjust the timing as needed */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+#header-text h1 span{
+    color: red;
+}
+.decor{
+    width:100%;
+    margin-top:100px;
+}
+
+.github-icon {
+    width: 40px; /* Adjust the size of the box */
+    height: 40px; /* Adjust the size of the box */
+    background-color: #333; /* Background color of the box */
+    border-radius: 50%; /* Make the box circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-icon i {
+    color: white; /* Color of the GitHub icon */
+    font-size: 20px; /* Adjust the size of the icon */
+}
+
+#header h2 {
+    font-size: 40px;
+    color: white;
+    margin-right: 0;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 50px;
+   /* border-right: .15em solid white; /* This will create the blinking cursor effect 
+    white-space: nowrap; /* This prevents the text from wrapping 
+    animation: typing 3s steps(30, end), blink-caret .5s step-end infinite; /* Adjust the timing as needed */
+}
+
+
+
+
+
+
+/* Hamburger menu styles */
+.toggle-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.close-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.roles {
+    font-size: 24px;
+    color: white;
+    margin-top: 10px;
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end) infinite, blink-caret .25s step-end infinite;
+}
+
+
+
+#heading h1{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.about {
+    background-color:grey;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    
+    margin-bottom: 50px;
+    color:white;
+}
+.about h2 span{
+    color:darkred;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.about-text p {
+    font-size: 28px;
+    line-height: 1.6;
+    color:white;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-text p span{
+    color:darkred;
+}
+
+.about-image {
+    flex: 0 0 35%;
+    max-width: 25%;
+    
+    
+}
+.container h3{
+    text-align: center;
+    margin-top: 150px;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+}
+
+.container h4{
+    text-align: center;
+    font-size: 19px;
+    margin-top: 10px;
+    color: white;
+
+}
+.container h4 span{
+    color: darkred;
+}
+
+.container a {
+    text-decoration: none;
+    color:inherit;
+    text-align: center;
+    color: white;
+    
+    
+
+}
+.container a:hover{
+    color:darkred;
+}
+.icon i{
+    font-size: 2.5rem;
+    margin: 8px;
+    
+}
+
+.ic{
+    text-align: center;
+}
+
+.png{
+    width: 40%;
+    margin-left: 900px;
+
+}
+#text h1{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 100px;
+    margin-right: 150px;
+}
+#text h1 span{
+    color:red;
+}
+
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-right: 100px;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+.container1 h2{
+    margin-top: 500px;
+}
+.container1 h2 span{
+    color: red;
+}
+
+
+
+.about-content1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text1 {
+    flex: 0 0 60%;
+    max-width: 100%;
+}
+
+.about-text1 p {
+    font-size: 28px;
+    line-height: 1.6;
+    color:white;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-text1 p span{
+    color:red;
+}
+
+.about-image1 {
+    width: 50%;   
+}
+.about-text1 h3{
+    margin-top: 50px;
+    font-family:'Times New Roman', Times, serif;
+}
+.about-text1 h3 span{
+    font-family:'Times New Roman', Times, serif;
+    color: red;
+}
+.hobbies-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default left padding */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.hobbies-list li {
+    font-size: 15px; /* Adjust font size as needed */
+    color: #fff; /* Set text color */
+    margin-bottom: 5px; /* Add some spacing between list items */
+    padding-left: 30px; /* Add some left padding for a nice effect */
+    position: relative; /* Required for the pseudo-element */
+}
+
+.hobbies-list li::before {
+    content: "\f058"; /* Unicode for a checkmark icon (FontAwesome) */
+    font-family: "Font Awesome 5 Free"; /* Required for FontAwesome icons */
+    font-weight: 900; /* Required for FontAwesome icons */
+    position: absolute; /* Position the pseudo-element absolutely */
+    left: 0; /* Align the icon to the left */
+    color: #ff004f; /* Set the icon color */
+}
+
+.skills-section {
+    margin-top: 40; /* Remove the top margin */
+    text-align: center;
+    background-color: grey;
+    padding: 30px 0;
+}
+
+.skills-section h3 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    
+}
+
+
+.skills-section h3 span {
+    color:black;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    margin: 20px;
+    text-align: center;
+}
+
+.skill i {
+    font-size: 48px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.skill h4 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.skill img {
+    width: 48px; /* Adjust the size as needed */
+    height: 48px;
+    margin-bottom: 10px;
+    color: darkred;
+}
+
+
+.education-section {
+    background-color: lightgray;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.education-section h3 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.education-column {
+    color: black;
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+}
+
+.education-item h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.education-item p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.education-separator {
+    width: 3px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: calc(33.33% - 1px);
+    top: 0;
+}
+
+.education-separator:nth-child(4) {
+    left: calc(66.66% - 1px);
+}
+
+@media (max-width: 768px) {
+    .education-container {
+        flex-direction: column;
+        align-items: flex-start;
+        position: static;
+    }
+
+    .education-separator {
+        width: 80%;
+        height: 2px;
+        position: static;
+        margin: 20px 0;
+        text-align: center;
+        margin-left: 40px;
+    }
+}
+    
+
+
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-image1{
+        display: none;
+        margin-top: -630px;
+        margin-left: -80px;
+        width:60%;
+    }
+    .about-text1 {
+        flex: 0 0 120%;
+        max-width: 100%;
+        text-align: center;
+        margin-left: 50px;
+    }
+    .about-text1 p{
+        font-size: 20px;
+    }
+    .container1 h2{
+        font-size: 25px;
+    }
+
+    
+}
+
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #0c0513;
+    background-image: url(images/pre.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#preloader-none {
+    opacity: 0;
+}
+
+.body-hidden {
+    overflow: hidden;
+}
+
+
+
+
+/* Responsive navigation menu styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .toggle-btn {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .decor{
+        width:120%;
+        padding-top: 300px;
+        margin-left: -400px;
+        margin-top: 50px;
+        margin-right: -20px;
+        
+        
+    }
+
+    #header-text h1 {
+        font-size: 50px;
+        color: white;
+       
+        overflow: hidden;
+        border-right: .15em solid white; /* This will create the blinking cursor effect */
+        white-space: nowrap; /* This prevents the text from wrapping */
+        animation: typing 3s steps(30, end), blink-caret .5s step-end infinite; /* Adjust the timing as needed */
+        margin-top: -300px;
+        text-align: center;
+        margin-left: -40px;
+        
+    }
+    .close-btn {
+        display: block;
+    }
+
+    #header-text h2 {
+        font-size: 40px;
+        color: white;
+        margin-right: 0;
+        overflow: hidden;
+        border-right: .15em solid white; /* This will create the blinking cursor effect */
+        white-space: nowrap; /* This prevents the text from wrapping */
+        animation: typing 3s steps(30, end), blink-caret .5s step-end infinite; /* Adjust the timing as needed */
+        margin-top:-5px;
+        text-align: center;
+        margin-left: 5px;
+    }
+
+    .about-container{
+        margin-right: 0px;
+    }
+
+    .about-container h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding-left: 160px;
+    }
+    
+    .about-container p {
+        font-size: 10px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    
+    
+}
+
+
+    
+
+
+
