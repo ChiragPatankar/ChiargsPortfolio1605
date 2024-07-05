@@ -12,7 +12,7 @@
 
 </head>
 <body>
-      
+    <div id="preloader"></div>  
     <div id="header">
     <div id="bg">
     <div id="container">
@@ -163,5 +163,23 @@ closeBtn.addEventListener('click', () => {
     navMenu.classList.remove('active');
     closeBtn.classList.remove('active');
 });
+</script>
+        <script>
+    window.addEventListener('load', function() {
+        var preloader = document.getElementById('preloader');
+        var body = document.querySelector('body');
+
+        // Add a class to the body to initially hide it
+        body.classList.add('body-hidden');
+
+        // Show the preloader
+        preloader.style.display = 'block';
+
+        // Hide the preloader and show the body after 3 seconds (adjust the duration as needed)
+        setTimeout(function() {
+            preloader.style.display = 'none';
+            body.classList.remove('body-hidden');
+        }, 500); // 3000 milliseconds = 3 seconds
+    });
 </script>
 </html>
