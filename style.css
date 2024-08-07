@@ -23,6 +23,35 @@ body{
     padding: 10px 10%;
     
 }
+@media (max-width: 414px) {
+  .about-text1 h3 {
+    font-size: 24px; /* Reduce font size for the heading */
+    margin-top: 30px; /* Adjust top margin */
+  }
+
+  .hobbies-list {
+    margin-top: 15px; /* Reduce top margin */
+  }
+
+  .hobbies-list li {
+    font-size: 16px; /* Adjust font size for list items */
+    padding-left: 25px; /* Reduce left padding */
+    margin-bottom: 10px; /* Increase space between items */
+  }
+
+  .hobbies-list li::before {
+    font-size: 18px; /* Adjust icon size */
+  }
+
+  .about-content1 {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .about-text1 {
+    text-align: left; /* Align text to the left */
+    padding: 0 15px; /* Add some horizontal padding */
+  }
+}
 nav {
     position: fixed; /* Keep the navigation bar fixed */
     top: 0; /* Align the navigation bar to the top of the viewport */
